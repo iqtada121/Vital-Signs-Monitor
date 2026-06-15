@@ -83,6 +83,7 @@ Designed a **custom 2-layer PCB** in EasyEDA featuring:
 ├── Arduino Files/         # Sensor drivers and embedded firmware source files
 ├── DWIN HMI/             # DWIN LCD display interface and UI configuration
 ├── Result and Demo/       # Demo videos, output screenshots, and test results
+└── 3D Model              # Contains .obj files of the LCD's encloser and device's back encloser
 └── README.md
 ```
 
@@ -108,15 +109,6 @@ Designed a **custom 2-layer PCB** in EasyEDA featuring:
 - STM32F411 Black Pill board
 - MAX30102, MLX90614, ECG module, DWIN 7-inch LCD
 - Custom PCB (Gerber files in `/PCB` folder) or breadboard wiring
-
-### Build & Flash
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/ai-vital-signs-monitor.git
-```
-2. Open the project in STM32CubeIDE
-3. Build the project (`Ctrl + B`)
-4. Flash to the STM32F411 via ST-Link
 
 ---
 
