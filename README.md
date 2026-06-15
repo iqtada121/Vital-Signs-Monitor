@@ -35,7 +35,6 @@ The entire firmware is built around **FreeRTOS**. Each sensor runs in its own de
 - `Task_SpO2` — MAX30102 SpO2 and heart rate acquisition
 - `Task_Temp` — MLX90614 body temperature reading
 - `Task_Display` — Real-time DWIN LCD update via UART
-- `Task_AI` — TensorFlow Lite inference for anomaly detection
 
 Tasks communicate via **FreeRTOS queues and semaphores**, ensuring non-blocking, concurrent data collection with precise timing across all channels. No sensor starves another.
 
@@ -80,19 +79,10 @@ Designed a **custom 2-layer PCB** in EasyEDA featuring:
 ## 📁 Repository Structure
 
 ```
-├── Core/
-│   ├── Src/               # Main application source files
-│   ├── Inc/               # Header files
-│   └── Startup/           # Startup assembly
-├── Drivers/
-│   ├── MAX30102/          # SpO2 & heart rate driver
-│   ├── MLX90614/          # Temperature sensor driver
-│   ├── ECG/               # ECG acquisition driver
-│   └── DWIN/              # LCD display driver
-├── FreeRTOS/              # RTOS kernel and config
-├── TFLite/                # TensorFlow Lite model and inference engine
-├── PCB/                   # EasyEDA schematic and PCB layout files
-├── Docs/                  # Block diagrams, wiring diagrams, reports
+├── AI based ECG/          # ECG signal processing and AI anomaly detection
+├── Arduino Files/         # Sensor drivers and embedded firmware source files
+├── DWIN HMI/             # DWIN LCD display interface and UI configuration
+├── Result and Demo/       # Demo videos, output screenshots, and test results
 └── README.md
 ```
 
@@ -132,13 +122,11 @@ git clone https://github.com/yourusername/ai-vital-signs-monitor.git
 
 ## 📸 Demo & Results
 
-> *(Add photos of the hardware, PCB, and LCD display here)*
+All pictures and Demo videos are in Resutls and Demo Folder
 
 - Real-time SpO2, HR, Temperature, and ECG displayed simultaneously
 - AI anomaly detection triggering threshold alerts on irregular readings
 - 94%+ classification accuracy validated on test dataset
-
-  <img width="1290" height="848" alt="image" src="https://github.com/user-attachments/assets/e33fcc8d-d3e8-429f-8c8a-74308eaa935c" />
 
 
 
